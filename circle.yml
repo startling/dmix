@@ -1,6 +1,7 @@
 machine:
   environment:
     PATH: "/usr/local/gradle-2.2.1/bin:$PATH"
+    ANDROID_HOME: "/usr/local/android-sdk-linux"
 
 dependencies:
   pre:
