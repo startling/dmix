@@ -13,6 +13,5 @@ dependencies:
 
 test:
   override:
-    - ./gradlew assembleFossDebug JMPDCommJava:Build
-  post:
+    - ./gradlew fossDebug
     - cp -r MPDroid/build/outputs/ $CIRCLE_ARTIFACTS
