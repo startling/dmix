@@ -9,9 +9,10 @@ dependencies:
     - wget "https://services.gradle.org/distributions/gradle-2.2.1-all.zip"
     - sudo unzip -d /usr/local gradle-2.2.1-all.zip
     # install the android 21 build tools
-    - echo y | android update sdk -u --all --filter 4
-    # todo: is this number constant?
+    - echo y | android update sdk -u --all --filter "build-tools-21.0.0"
 
 test:
   override:
     - ./gradlew assembleFossDebug JMPDCommJava:Build
+  post:
+    - cp -r MPDroid/build/outputs/ $CIRCLE_ARTIFACTS
